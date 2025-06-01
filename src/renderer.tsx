@@ -21,7 +21,7 @@ export const renderer = jsxRenderer(({ children }) => {
             </div>
             <div>
               <div className="callback-tip">️ Change your Authorize Callback Domain: strava-auth.friendsa.workers.dev </div>
-              <img src="/public/callback-domain.png" alt="callback" className="callback-domain-img" />
+              <img src="/callback-domain.png" alt="callback" className="callback-domain-img" />
             </div>
             <div>
               <label>Scope:</label>
