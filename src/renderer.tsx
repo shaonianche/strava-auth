@@ -1,6 +1,5 @@
 import { jsxRenderer } from 'hono/jsx-renderer'
 import { Link, ViteClient } from 'vite-ssr-components/hono'
-import { serveStatic } from 'hono/cloudflare-workers'
 
 export const renderer = jsxRenderer(({ children }) => {
   return (
