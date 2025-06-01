@@ -3,10 +3,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build:ui": "bun build src/ui.ts --outdir public",
+    "build": "bun run build:ui && vite build",
     "preview": "$npm_execpath run build && vite preview",
-    "deploy": "$npm_execpath run build && wrangler deploy",
-    "cf-typegen": "wrangler types --env-interface CloudflareBindings"
+    "deploy": "$npm_execpath run build && wrangler deploy"
   },
   "dependencies": {
     "hono": "^4.7.11"

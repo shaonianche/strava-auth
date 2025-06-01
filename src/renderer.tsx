@@ -7,7 +7,7 @@ export const renderer = jsxRenderer(({ children }) => {
       <head>
         <ViteClient />
         <Link href="/src/style.css" rel="stylesheet" />
-        <script type="module" src="/src/ui.ts"></script>
+        <script type="module" src="/ui.js"></script>
       </head>
       <body>
         <div id="container" style={{ margin: '2rem' }}>
@@ -20,7 +20,7 @@ export const renderer = jsxRenderer(({ children }) => {
               <label>Client Secret: <input type="password" name="client_secret" required /></label>
             </div>
             <div>
-              <div className="callback-tip">️ Change your Authorize Callback Domain: strava-auth.friendsa.workers.dev </div>
+              <div className="callback-tip"> Change your Authorize Callback Domain: strava-auth.friendsa.workers.dev </div>
               <img src="/callback-domain.png" alt="callback" className="callback-domain-img" />
             </div>
             <div>
