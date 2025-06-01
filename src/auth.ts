@@ -1,6 +1,6 @@
 import { Hono } from 'hono'
 
-const REDIRECT_URI = 'https://strava-auth.pages.dev'
+const REDIRECT_URI = 'https://strava-auth.friendsa.workers.dev'
 
 const authApp = new Hono()
 

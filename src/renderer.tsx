@@ -1,5 +1,6 @@
 import { jsxRenderer } from 'hono/jsx-renderer'
 import { Link, ViteClient } from 'vite-ssr-components/hono'
+import { serveStatic } from 'hono/cloudflare-workers'
 
 export const renderer = jsxRenderer(({ children }) => {
   return (
@@ -20,19 +21,19 @@ export const renderer = jsxRenderer(({ children }) => {
               <label>Client Secret: <input type="password" name="client_secret" required /></label>
             </div>
             <div>
-              <div className="callback-tip">️ Change your Authorize Callback Domain: strava-auth.pages.dev </div>
+              <div className="callback-tip">️ Change your Authorize Callback Domain: strava-auth.friendsa.workers.dev </div>
               <img src="/public/callback-domain.png" alt="callback" className="callback-domain-img" />
             </div>
             <div>
               <label>Scope:</label>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.3em', margin: '0.5em 0 1em 0' }}>
-                <label><input type="checkbox" name="scope" value="read" /> read</label>
-                <label><input type="checkbox" name="scope" value="read_all" /> read_all</label>
-                <label><input type="checkbox" name="scope" value="profile:read_all" /> profile:read_all</label>
-                <label><input type="checkbox" name="scope" value="profile:write" /> profile:write</label>
-                <label><input type="checkbox" name="scope" value="activity:read" /> activity:read</label>
-                <label><input type="checkbox" name="scope" value="activity:read_all" /> activity:read_all</label>
-                <label><input type="checkbox" name="scope" value="activity:write" /> activity:write</label>
+                <label><input type="checkbox" name="scope" value="read" defaultChecked /> read</label>
+                <label><input type="checkbox" name="scope" value="read_all" defaultChecked /> read_all</label>
+                <label><input type="checkbox" name="scope" value="profile:read_all" defaultChecked /> profile:read_all</label>
+                <label><input type="checkbox" name="scope" value="profile:write" defaultChecked /> profile:write</label>
+                <label><input type="checkbox" name="scope" value="activity:read" defaultChecked /> activity:read</label>
+                <label><input type="checkbox" name="scope" value="activity:read_all" defaultChecked /> activity:read_all</label>
+                <label><input type="checkbox" name="scope" value="activity:write" defaultChecked /> activity:write</label>
               </div>
             </div>
             <button id="auth-btn" type="submit">Start Authorization</button>
