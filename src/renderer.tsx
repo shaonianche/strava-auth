@@ -26,11 +26,7 @@ export const renderer = jsxRenderer(({ children }) => {
             <div>
               <label>Scope:</label>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.3em', margin: '0.5em 0 1em 0' }}>
-                <label><input type="checkbox" name="scope" value="read" checked /> read</label>
                 <label><input type="checkbox" name="scope" value="read_all" checked /> read_all</label>
-                <label><input type="checkbox" name="scope" value="profile:read_all" checked /> profile:read_all</label>
-                <label><input type="checkbox" name="scope" value="profile:write" checked /> profile:write</label>
-                <label><input type="checkbox" name="scope" value="activity:read" checked /> activity:read</label>
                 <label><input type="checkbox" name="scope" value="activity:read_all" checked /> activity:read_all</label>
                 <label><input type="checkbox" name="scope" value="activity:write" checked /> activity:write</label>
               </div>

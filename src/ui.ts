@@ -53,14 +53,15 @@ window.addEventListener('DOMContentLoaded', () => {
                 })
                     .then(res => res.json())
                     .then((data: any) => {
-                        if (data.refresh_token) {
+                        if (data.refresh_token && data.access_token) {
                             result.classList.remove('error-mode');
                             result.innerHTML =
                                 '<div class="auth-block"><span class="auth-label">Code</span><span class="auth-code-value">' + code + '</span></div>' +
+                                '<div class="auth-block success"><span class="auth-label">Access Token</span><span class="auth-refresh-value">' + data.access_token + '</span></div>' +
                                 '<div class="auth-block success"><span class="auth-label">Refresh Token</span><span class="auth-refresh-value">' + data.refresh_token + '</span></div>';
                             hideError();
                         } else {
-                            showError('', data);
+                            showError('Missing token in response', data);
                         }
                     })
                     .catch((err: any) => {
